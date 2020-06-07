@@ -5,7 +5,7 @@ namespace CourierKata.Parcels
         public ExtraLargeParcel(Parcel baseParcel) : base(baseParcel)
         {
             Description  = "Extra Large Parcel";
-            Price  =25.0M;
+            Price = 25.0M;
             ParcelType = ParcelType.extra_large; // for backwards compatibility (refactor out later);
             // SizeLimit  = none...; 
             WeightLimit  = 10;

@@ -7,7 +7,8 @@ namespace CourierKata
 {
     public class ParcelFactory
     {
-        public static Parcel CreteParcel(int width, int height, int length)
+
+        public static Parcel CreteSizedParcel(int width, int height, int length)
         {
             Parcel parcel = new BaseParcel(height, length, width);
             var largestDimension = parcel.LargestDimension();
@@ -30,6 +31,11 @@ namespace CourierKata
             }
 
             return parcel;
+        }
+
+        public static Parcel CreateWeightedParcel(int width, int height, int length, int weight)
+        {
+            return new WeightedParcel(CreteSizedParcel(width, height, length), weight);
         }
     }
 }

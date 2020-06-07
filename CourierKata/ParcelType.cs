@@ -5,6 +5,7 @@ namespace CourierKata
         small, 
         medium, 
         large,
-        extra_large
+        extra_large, 
+        heavy
     }
 }

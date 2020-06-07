@@ -35,7 +35,15 @@ namespace CourierKata
 
         public static Parcel CreateWeightedParcel(int width, int height, int length, int weight)
         {
-            return new WeightedParcel(CreteSizedParcel(width, height, length), weight);
+            if (weight < 50)
+            {
+                return new WeightedParcel(CreteSizedParcel(width, height, length), weight);
+            }
+            else
+            {
+                // this is far from ideal solution. 
+                return new HeavyParcel(CreteSizedParcel(width, height, length), weight);
+            }
         }
     }
 }

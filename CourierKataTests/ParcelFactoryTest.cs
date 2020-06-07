@@ -48,7 +48,15 @@ namespace CourierKataTests
             Assert.IsTrue(ParcelType.extra_large == xLarge.ParcelType);
             Assert.IsTrue(small is WeightedParcel);
         }
-        
+
+        [Test]
+        public void ShouldCorrectlyCreateHeavyParcel()
+        {
+            var heavy = ParcelFactory.CreateWeightedParcel(9, 9, 9, 100);
+            Assert.IsTrue(heavy is HeavyParcel);
+            Assert.AreEqual(100,  heavy.Price);
+        }
+
         [Test]
         [Ignore("Not yet handled / implemented")]
         public void ShouldCorrectlyHandleAttemptsToCreateImpossibleParcels()

@@ -25,7 +25,9 @@ OK
         as a separate item in the output, with its associated cost
     ● Speedy shipping should not impact the price
         of individual parcels, i.e. their individual cost should remain the same as it was before
-
+------------------------------------------------------------------------------------------------------------
+OK-ish (revisit time permitting)
+------------------------------------------------------------------------------------------------------------
 
 3) ​There have been complaints from delivery drivers that people are taking advantage 
     of our dimension only shipping costs. A new weight limit has been

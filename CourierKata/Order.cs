@@ -5,12 +5,14 @@ namespace CourierKata
     public class Order
     {
         private List<Parcel> Parcels { get; }
-        public decimal TotalCost { get; }
+        public decimal RegularCost { get; }
+        public Dictionary<OrderType, OrderCost> Costs { get; }
 
         public Order(OrderBuilder orderBuilder)
         {
             Parcels = orderBuilder.Parcels;
-            TotalCost = orderBuilder.Cost;
+            Costs = orderBuilder.Costs;
+            RegularCost = Costs[OrderType.regular].Total;
         }
     }
 }

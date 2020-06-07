@@ -1,3 +1,5 @@
+using System.Linq;
+
 namespace CourierKata.Parcels
 {
     public class BaseParcel : Parcel

@@ -9,29 +9,27 @@ namespace CourierKata
     {
         public static Parcel CreteParcel(int width, int height, int length)
         {
-            int largestDimension = new int[] {width, height, length}.Max();
-            Parcel baseParcel = new BaseParcel();
+            Parcel parcel = new BaseParcel(height, length, width);
+            var largestDimension = parcel.LargestDimension();
 
-            if (largestDimension < 10)
+            if (largestDimension < SmallParcel.AllowedSize)
             {
-                parcelType = ParcelType.small;
+                parcel = new SmallParcel(parcel);
                 
-            } else if (largestDimension < 50)
+            } else if (largestDimension < MediumParcel.AllowedSize)
             {
-                parcelType = ParcelType.medium;
+                parcel = new MediumParcel(parcel);
                 
-            } else if (largestDimension < 100)
+            } else if (largestDimension < LargeParcel.AllowedSize)
             {
-                parcelType = ParcelType.large;
+                parcel = new LargeParcel(parcel);
             }
             else
             {
-                parcelType = ParcelType.extra_large;
-                
+                parcel = new ExtraLargeParcel(parcel);
             }
-            
-            return new Parcel(height, length, width, parcelType, _parcelPricing[parcelType]);
 
+            return parcel;
         }
     }
 }

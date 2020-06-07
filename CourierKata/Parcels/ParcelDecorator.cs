@@ -7,7 +7,5 @@ namespace CourierKata.Parcels
         {
             _baseParcel = baseParcel;
         }
-
-        // public bool isLegall() => new int[] {Width, Height, Length}.Max() < SizeLimit;
     }
 }

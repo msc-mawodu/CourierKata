@@ -14,6 +14,9 @@ You work for a courier company and have been tasked with creating a code library
     ● Medium parcel: all dimensions < 50cm. Cost $8
     ● Large parcel: all dimensions < 100cm. Cost $15
     ● XL parcel: any dimension >= 100cm. Cost $25
+------------------------------------------------------------------------------------------------------------
+OK
+------------------------------------------------------------------------------------------------------------
 
 2) ​Thanks to logistics improvements we can deliver parcels faster. This means we can charge more money. 
     Speedy shipping can be selected by the user to take advantage of our improvements.

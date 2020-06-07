@@ -1,20 +1,14 @@
 namespace CourierKata
 {
-    public class Parcel
+    public abstract class Parcel
     {
-        public int Height { get; }
-        public int Length { get; }
-        public int Width { get; }
-        public ParcelType ParcelType { get; }
-        public decimal Price { get; }
-
-        public Parcel(int height, int length, int width, ParcelType parcelType, decimal price)
-        {
-            Height = height;
-            Length = length;
-            Width = width;
-            ParcelType = parcelType;
-            Price = price;
-        }
+        public int Height { get; protected set; }
+        public int Length { get; protected set; }
+        public int Width { get; protected set; }
+        public int Weight { get; protected set; }
+        public int SizeLimit { get; protected set; }
+        public int WeightLimit { get; protected set; }
+        public string Description { get; protected set; }
+        public decimal Price { get; protected set; }
     }
 }
